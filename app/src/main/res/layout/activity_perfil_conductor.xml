@@ -27,23 +27,45 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
                 <LinearLayout
-                    android:background="@color/colorPrimary"
                     android:layout_width="match_parent"
                     android:layout_height="200dp"
+                    android:background="@color/colorPrimary"
                     android:orientation="vertical">
 
-                    <com.mikhaellopez.circularimageview.CircularImageView
-                        android:layout_gravity="center_horizontal"
-                        android:layout_width="140dp"
+                    <RelativeLayout
+                        android:layout_width="120dp"
                         android:layout_height="120dp"
-                        android:src="@mipmap/ic_miperfil">
-                    </com.mikhaellopez.circularimageview.CircularImageView>
+                        android:layout_gravity="center_horizontal">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="bottom|end"
+                            android:translationZ="1dp">
+
+                            <ImageView
+                                android:id="@+id/subir_foto"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:src="@drawable/edit_pencil" />
+                        </LinearLayout>
+
+
+                        <com.mikhaellopez.circularimageview.CircularImageView
+                            android:id="@+id/img_photo"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@mipmap/ic_miperfil">
+
+                        </com.mikhaellopez.circularimageview.CircularImageView>
+
+                    </RelativeLayout>
+
 
                 </LinearLayout>
 
@@ -57,8 +79,7 @@
                     android:layout_marginTop="150dp"
                     app:cardElevation="5dp"
                     android:layout_marginBottom="10dp"
-                    android:layout_centerHorizontal="true"
-                    >
+                    android:layout_centerHorizontal="true">
 
                     <LinearLayout
                         android:layout_width="match_parent"
